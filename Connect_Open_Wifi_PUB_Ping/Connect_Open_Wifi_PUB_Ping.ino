@@ -12,7 +12,7 @@
 #define MAX_CONNECT_TIME  30000
 
 /* SSID that to be stored to connect. */
-char ssid[MAX_SSID_LEN] = "<Your_Wifi_Name>";
+char ssid[MAX_SSID_LEN] = "<Your_Wifi_Name_Replace_This>";
 const char* remote_host = "www.google.com";
 
 /* Scan available networks and sort them in order to their signal strength. */
