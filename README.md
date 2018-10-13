@@ -1,5 +1,5 @@
 # COSNodeMCU
-..
+.
 
 ## Git instructions
 ### Install git
