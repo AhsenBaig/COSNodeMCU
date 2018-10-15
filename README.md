@@ -1,5 +1,4 @@
 # COSNodeMCU
-test   
 
 ## Git instructions
 ### Install git
@@ -7,10 +6,17 @@ test
 
 ### Install VS Code
 
-### Configure git with the 
-Download the official github client:
+### Install and Configure git (Command line/Terminal)
+[Download the official github client](https://git-scm.com/downloads)
 
-https://desktop.github.com/
+#### Windows only
+[Desktop Client](https://desktop.github.com/)
+
+
+### Add GitHub account info
+```git
+git config --global user.name "<Your_GitHub_UserName>"
+```
 
 ```git
 git remote add origin https://github.com/AhsenBaig/COSNodeMCU.git
