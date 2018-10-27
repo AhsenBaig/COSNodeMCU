@@ -1,3 +1,4 @@
+
 /*MAIN PROGRAM 10/19/18 WE ARE TRYING TO RUN THE FAN AND THE ULTRASONIC
  * SENSOR AT THE SAME. WE WANT TO TAKE DATA FROM THE SENSOR VARIABLE "DISTANCE" AND
  * SEND IT TO OUR SENSOR TO TURN ON OUR FAN ("outputPin") AND CONTROL THE VELOCITY
@@ -7,6 +8,7 @@
 #define trigPin 7
 #define outputPin 11
 long duration, distance;
+int PWMVal;
 
 void setup() {
   Serial.begin(9600);
@@ -29,11 +31,8 @@ void loop() {
   distance = duration/58.2;
 
   Serial.println(distance);
-
-  digitalWrite(outputPin, HIGH);
-  delayMicroseconds(100);
-  digitalWrite(outputPin, LOW);
-  delayMicroseconds(65);
-
-  delay(50);
+PWMVal = map(distance, 2, 100, 0, 255);
+analogWrite(outputPin, PWMVal);
 }
+
+  
