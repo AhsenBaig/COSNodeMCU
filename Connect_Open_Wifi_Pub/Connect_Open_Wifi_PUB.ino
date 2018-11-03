@@ -29,7 +29,7 @@ void scanAndSort() {
     }
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
-        if (WiFi.RSSI(indices[j]) > WiFi.RSSI(indices[i])) {
+        if (WiFi.RSSI(indices[j]) > WiFi.RSSI(i)) {
           std::swap(indices[i], indices[j]);
         }
       }
