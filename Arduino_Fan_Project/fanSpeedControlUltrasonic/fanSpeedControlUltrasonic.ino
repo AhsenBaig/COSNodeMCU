@@ -4,26 +4,29 @@
  * SEND IT TO OUR SENSOR TO TURN ON OUR FAN ("outputPin") AND CONTROL THE VELOCITY
  * FROM SENSOR DATA. DELAY IS TOO LONG. FAN WON'T WORK.
  */
+/* 
 #define echoPin 8
 #define trigPin 7
-#define outputPin 11
+*/
+#define outputPin 3
 long duration, distance;
 int PWMVal;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(echoPin,INPUT);
-  pinMode(trigPin,OUTPUT);
+  //pinMode(echoPin,INPUT);
+  //pinMode(trigPin,OUTPUT);
   pinMode(outputPin,OUTPUT);
 }
 
 void loop() {
-  digitalWrite(trigPin, LOW);
+  
+  /*digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
 
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-
+  
   digitalWrite(trigPin, LOW);
 
   duration = pulseIn(echoPin, HIGH);
@@ -31,8 +34,11 @@ void loop() {
   distance = duration/58.2;
 
   Serial.println(distance);
-PWMVal = map(distance, 2, 100, 0, 255);
-analogWrite(outputPin, PWMVal);
+  */
+  //digitalWrite(outputPin,HIGH);
+  PWMVal = 255;
+  //PWMVal = map(distance, 2, 100, 0, 255);
+  analogWrite(outputPin, PWMVal);
 }
 
   
