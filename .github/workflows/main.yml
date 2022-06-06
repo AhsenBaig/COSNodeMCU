@@ -25,5 +25,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Compress files
         run: zip -r release.zip .
-        working-directory: Connect_Open_Wifi_Pub
+        working-directory: ./Connect_Open_Wifi_Pub
 
