@@ -25,6 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Zip Folder
-        run: cd Connect_Open_Wifi_Pub; zip -r ../release.zip *
+        run: cd Connect_Open_Wifi_Pub; zip -r ../release.zip .
       - name: Release to Github
         run: echo "Release"
