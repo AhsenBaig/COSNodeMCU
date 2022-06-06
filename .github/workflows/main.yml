@@ -31,4 +31,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Compress files
-        run: zip -r release.zip .        
+        run: zip -r release.zip . -x ".git/*" ".github/*" "Arduino_Fan_Project/*" "Connect_Open_Wifi.ino/*" "Connect_Open_Wifi_PUB_Ping/*" "LibsDrivers/*"
