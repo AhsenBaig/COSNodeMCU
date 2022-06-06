@@ -26,6 +26,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Zip Folder
         run: zip -qq -r release.zip .
-        working-directory: COSNodeMCU/LibsDrivers
+        working-directory: ./LibsDrivers
       - name: Release to Github
         run: echo "Release"
