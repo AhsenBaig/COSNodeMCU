@@ -7,8 +7,8 @@ on:
   workflow_dispatch:  
 
 defaults:
-  run:
-  working-directory: Connect_Open_Wifi_Pub
+    run:
+    working-directory: Connect_Open_Wifi_Pub
 name: Upload Release Asset
 
 jobs:
