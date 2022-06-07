@@ -22,9 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step-1
-      -  run: echo "File1: $fileName"
-      -  run: echo "File2: ${{ env.DAY_OF_WEEK }}"
-      -  run: echo "File3: ${ env.DAY_OF_WEEK }"
+        run: echo "File1: $fileName"
+      - name: step-2
+        run: echo "File2: ${{ env.DAY_OF_WEEK }}"
+      - name: step-3
+        run: echo "File3: ${ env.DAY_OF_WEEK }"
       - name: "Say Hello Mona it's Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
