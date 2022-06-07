@@ -25,7 +25,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project # This would actually build your project, using zip for an example artifact
-        run: zip -r ../${{ env.awsControlTowerFile }}.zip .
+        run: zip -r ../"${{ env.fileName }}".zip .
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
